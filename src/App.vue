@@ -15,9 +15,9 @@
 </template>
 
 <script>
-  import Navbar from "./components/Navbar.vue";
-  import Home from "./components/Home.vue";
-  import Footer from "./components/Footer.vue";
+  import Navbar from "./components/Navbar/Navbar.vue";
+  import Home from "./components/Home/Home.vue";
+  import Footer from "./components/Footer/Footer.vue";
 
   export default {
     name: "App",
@@ -41,24 +41,30 @@
   }
 
   .box {
+    position: relative;
     display: flex;
     flex-direction: column;
 
     .wrapper {
       display: flex;
 
-      aside, main {
-        height: 85vh;
-      }
-
       aside {
         width: 20%;
         background-color: $aside-bg;
+        position: fixed;
+        left: 0;
+        height: auto;
+        padding-bottom: 2100px;
+
       }
 
       main {
+        height: auto;
         width: 80%;
+        position: absolute;
+        right: 0;
         background: linear-gradient(to bottom, $color-gradient-1, $color-gradient-2, $color-gradient-3, $color-gradient-4, $color-gradient-5, $color-gradient-5, $color-gradient-6);
+        padding-bottom: 300px;
       }
     }
 
@@ -66,6 +72,8 @@
       height: 15vh;
       width: 100%;
       background-color: $footer-bg;
+      position: fixed;
+      bottom: 0;
     }
   }
 </style>
