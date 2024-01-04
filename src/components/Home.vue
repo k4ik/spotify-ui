@@ -63,7 +63,6 @@
                         <span>Skyfall</span>
                         <button>
                             <PlayIcon />
-                            
                         </button>
                     </div>
                 </div>
