@@ -30,16 +30,9 @@
 </template>
 
 <script>
-    import { defineComponent } from 'vue';
-    import { Home, Search, Library } from 'lucide-vue-next';
-
-    export default defineComponent({
-        components: {
-            HomeIcon: Home,
-            SearchIcon: Search,
-            LibraryIcon: Library,
-        },
-    });
+    export default {
+        name: 'Navbar'
+    }
 </script>
 
 <style lang="scss" scoped>

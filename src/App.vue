@@ -4,7 +4,9 @@
       <aside>
         <Navbar/>
       </aside>
-      <main>home</main>
+      <main>
+        <Home/>
+      </main>
     </div>
     <div class="footer">
       footer
@@ -13,12 +15,14 @@
 </template>
 
 <script>
-  import Navbar from "./components/Navbar.vue"
+  import Navbar from "./components/Navbar.vue";
+  import Home from "./components/Home.vue"
 
   export default {
     name: "App",
     components: {
-      Navbar
+      Navbar,
+      Home
     }
   }
 </script>
