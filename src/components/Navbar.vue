@@ -43,17 +43,19 @@
 </script>
 
 <style lang="scss" scoped>
+    @import "../assets/scss/variables";
+
     .navbar {
         width: 20%;
         height: 85vh;
-        background-color: black;
+        background-color: $bg-navbar;
         padding: 10px;
         display: flex;
         flex-direction: column;
         gap: 10px;
 
         .container-navbar {
-            background-color: rgb(22, 22, 22);
+            background-color: $bg-container-navbar;
             border-radius: 15px;
             display: flex;
             flex-direction: column;
@@ -63,7 +65,7 @@
                 align-items: center;
                 gap: 10px;
                 margin: 10px 0;
-                color: #ebebeb;
+                color: $icon-color;
                 font-weight: 500;
             }
         }
