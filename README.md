@@ -11,7 +11,7 @@ Before you begin, make sure you have installed on your machine:
 You can download the project directly from the GitHub repository. Open your terminal and execute the following command:
 
 ```bash
-git clone https://github.com/your-username/your-project.git
+git clone https://github.com/k4ik/spotify-ui.git
 ```
 
 This will clone the project repository to your local directory.
@@ -20,7 +20,7 @@ This will clone the project repository to your local directory.
 Navigate to the project directory and install the dependencies using npm:
 
 ```bash
-cd your-project
+cd spotify-ui
 npm install
 ```
 
