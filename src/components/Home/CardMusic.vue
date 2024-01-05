@@ -22,7 +22,7 @@ export default {
 
 .card {
     display: flex;
-    width: 300px;
+    max-width: 300px;
     margin-bottom: 30px;
 
 
@@ -71,6 +71,19 @@ export default {
         }
     }
 }
+
+@media screen and (max-width: 940px){
+    .card {
+        max-width: 250px;
+    }
+}
+
+@media screen and (max-width: 550px){
+    .card {
+        max-width: 400px;
+    }
+}
+
 
 
 </style>

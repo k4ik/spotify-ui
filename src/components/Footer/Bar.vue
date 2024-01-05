@@ -75,4 +75,21 @@
             width: 300px;
         }
     }
+
+    @media screen and (max-width: 940px) {
+        .bar {
+            .bar-span {
+                width: 150px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 550px) {
+        .bar {
+            .icons {
+                gap: 10px;
+                font-size: 10px;
+            }
+        }
+    }
 </style>

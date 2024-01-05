@@ -69,9 +69,41 @@
 
     .card-like-container {
         display: grid;
-        grid-template-columns: auto auto auto auto auto;
+        grid-template-columns: auto auto auto auto;
     }
 }
 
+@media screen and (max-width: 940px) {
+    .container-home {
+        .grid {
+            grid-template-columns: auto auto ;
+        }
 
+        .card-like-container {
+            grid-template-columns: auto auto auto;
+
+        }
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .container-home {
+        .grid {
+            grid-template-columns: auto;
+        }
+
+        .card-like-container {
+            grid-template-columns: auto auto;
+
+        }
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .container-home {
+        .card-like-container {
+            grid-template-columns: auto auto;
+        }
+    }
+}
 </style>

@@ -30,4 +30,16 @@
     align-items: center;
     padding: 0 30px;
 }
+
+@media screen and (max-width: 940px) {
+    .footer {
+        padding: 0 15px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .footer {
+        justify-content: center;
+    }
+}
 </style>

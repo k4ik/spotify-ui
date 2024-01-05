@@ -26,4 +26,10 @@
         }
     }
 
+    @media screen and (max-width: 550px) {
+        .options {
+            display: none;
+        }
+    }
+
 </style>

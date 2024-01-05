@@ -43,4 +43,10 @@ export default {
             }
         }
     }
+
+    @media screen and (max-width: 425px) {
+        .card-like-musics {
+            max-width: 120px;
+        }
+    }
 </style>

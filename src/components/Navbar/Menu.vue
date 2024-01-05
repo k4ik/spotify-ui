@@ -27,6 +27,7 @@ export default {
 
     img {
         margin-bottom: 30px;
+        max-width: 150px;
     }
 
     .icons-container {

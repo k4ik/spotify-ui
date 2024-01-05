@@ -76,4 +76,18 @@
       bottom: 0;
     }
   }
+
+  @media screen and (max-width: 940px) {
+    .box {
+      .wrapper {
+        aside {
+          display: none;
+        }
+
+        main {
+          width: 100%;
+        }
+      }
+    }
+  }
 </style>

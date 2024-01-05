@@ -42,4 +42,18 @@
             }
         }
     }
+
+    @media screen and (max-width: 940px) {
+        .music-played {
+            img {
+                width: 50px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 550px) {
+        .music-played {
+            display: none;
+        }
+    }
 </style>
