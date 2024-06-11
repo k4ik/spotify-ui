@@ -1,18 +1,21 @@
 <template>
     <div class="card">
-        <img src="../../assets/images/capa-album.jpg" alt="">
+        <img src="../../assets/images/capa-album.jpg" alt="capa">
         <div class="card-content">
             <span>Skyfall</span>
             <button>
-                <PlayIcon />
+                <Play fill="black" />
             </button>
         </div>
     </div>
 </template>
 
 <script>
+import { Play } from "lucide-vue-next";
 export default {
-    name: "CardMusic"
+    components: {
+        Play,
+    },
 }
 </script>
 
@@ -23,6 +26,7 @@ export default {
 .card {
     display: flex;
     max-width: 300px;
+    width: 100%;
     margin-bottom: 30px;
 
 
@@ -60,7 +64,6 @@ export default {
         button {
             border: none;
             background-color: $button-bg;
-            color: $text-color;
             width: 40px;
             height: 40px;
             border-radius: 50%;
@@ -71,19 +74,4 @@ export default {
         }
     }
 }
-
-@media screen and (max-width: 940px){
-    .card {
-        max-width: 250px;
-    }
-}
-
-@media screen and (max-width: 550px){
-    .card {
-        max-width: 400px;
-    }
-}
-
-
-
 </style>

@@ -1,9 +1,10 @@
 <template>
     <div class="container-home">
-        <Arrows/>
+        <div class="header">
+            <Arrows />
+            <Actions />
+        </div>
         <section>
-            <h1>Good morning</h1>
-
             <article class="grid">
                 <CardMusic />
                 <CardMusic />
@@ -22,6 +23,16 @@
                 <CardLikeMusic />
                 <CardLikeMusic />
                 <CardLikeMusic />
+            </div>
+        </section>
+        <section>
+            <h2>Recently played</h2>
+
+            <div class="card-like-container">
+                <CardLikeMusic />
+                <CardLikeMusic />
+                <CardLikeMusic />
+                <CardLikeMusic />
                 <CardLikeMusic />
             </div>
         </section>
@@ -29,17 +40,19 @@
 </template>
 
 <script>
-    import CardMusic from "./CardMusic.vue";
-    import CardLikeMusic from "./CardLikeMusic.vue";
-    import Arrows from "./Arrows.vue";
+import CardMusic from "./CardMusic.vue";
+import CardLikeMusic from "./CardLikeMusic.vue";
+import Arrows from "./Arrows.vue";
+import Actions from "./Actions.vue";
 
-    export default {
-        components: {
-            CardMusic,
-            CardLikeMusic,
-            Arrows
-        }
+export default {
+    components: {
+        CardMusic,
+        CardLikeMusic,
+        Arrows,
+        Actions
     }
+}
 </script>
 
 <style lang="scss" scoped>
@@ -48,62 +61,29 @@
 .container-home {
     padding: 40px;
 
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
     h1 {
         color: #fff;
         font-size: 30px;
         margin: 20px 0;
     }
 
-    .grid {
-        display: grid;
-        grid-template-columns: auto auto auto;
-
+    .grid,
+    .card-like-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
     }
-
 
     h2 {
         color: #fff;
         font-size: 20px;
         margin: 20px 0;
-    }
-
-    .card-like-container {
-        display: grid;
-        grid-template-columns: auto auto auto auto;
-    }
-}
-
-@media screen and (max-width: 940px) {
-    .container-home {
-        .grid {
-            grid-template-columns: auto auto ;
-        }
-
-        .card-like-container {
-            grid-template-columns: auto auto auto;
-
-        }
-    }
-}
-
-@media screen and (max-width: 550px) {
-    .container-home {
-        .grid {
-            grid-template-columns: auto;
-        }
-
-        .card-like-container {
-            grid-template-columns: auto auto;
-
-        }
-    }
-}
-
-@media screen and (max-width: 425px) {
-    .container-home {
-        .card-like-container {
-            grid-template-columns: auto auto;
-        }
     }
 }
 </style>

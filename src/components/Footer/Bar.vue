@@ -1,71 +1,89 @@
 <template>
     <div class="bar">
-        <div class="icons">
-            <ShuffleIcon />
-            <SkipBackIcon />
-            <button>
-                <PlayIcon />
-            </button>
-            <SkipForwardIcon />
-            <RepeatIcon />
-        </div>
-        <div class="music-bar">
-            <p class="minutes">00:00</p>
-            <p class="bar-span"></p>
-            <p class="minutes">02:45</p>
-        </div>
+        <ul class="icons">
+            <li class="item">
+                <Shuffle size="18" />
+            </li>
+            <li class="item">
+                <SkipBack size="18" />
+            </li>
+            <li class="item">
+                <Play size="18" fill="black" />
+            </li>
+            <li class="item">
+                <SkipForward size="18" />
+            </li>
+            <li class="item">
+                <Repeat size="18" />
+            </li>
+        </ul>
+        <ul class="music-bar">
+            <li class="minutes">00:00</li>
+            <li class="bar-span"></li>
+            <li class="minutes">02:45</li>
+        </ul>
     </div>
 </template>
 
 <script>
-    export default {
-        name: "Bar"
-    }
+import { Shuffle, SkipBack, Play, SkipForward, Repeat } from "lucide-vue-next";
+export default {
+    components: {
+        Shuffle, SkipBack, Play, SkipForward, Repeat
+    },
+}
 </script>
 
 <style lang="scss" scoped>
-    @import "../../assets/scss/variables";
+@import "../../assets/scss/variables";
 
-    .bar {
+.bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    .icons {
         display: flex;
-        flex-direction: column;
         align-items: center;
-        gap: 10px;
+        gap: 30px;
+        list-style: none;
 
-        .icons {
-            color: #fff;
-            display: flex;
-            gap: 30px;
+        .item {
+            color: $text-color;
 
             &:hover {
-                cursor: pointer;
+                transition: all .1s;
+                color: $text-color2;
             }
 
-            button {
-                border: none;
+            &:nth-child(3) {
                 background-color: #ffffff;
-                color: #000;
-                width: 30px;
-                height: 30px;
                 border-radius: 50%;
-                font-size: 14px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                color: #000;
+                padding: 5px;
 
                 &:hover {
-                    cursor: pointer;
+                    transition: all .1s;
+                    transform: scale(1.1);
                 }
             }
         }
 
-        .music-bar {
-            display: flex;
-            align-items: center;
-        }
+
+    }
+
+    .music-bar {
+        display: flex;
+        align-items: center;
+        list-style: none;
 
         .minutes {
-            color: #fff;
+            color: $text-color;
+            font-size: 12px;
         }
 
         .bar-span {
@@ -75,21 +93,5 @@
             width: 300px;
         }
     }
-
-    @media screen and (max-width: 940px) {
-        .bar {
-            .bar-span {
-                width: 150px;
-            }
-        }
-    }
-
-    @media screen and (max-width: 550px) {
-        .bar {
-            .icons {
-                gap: 10px;
-                font-size: 10px;
-            }
-        }
-    }
+}
 </style>

@@ -71,23 +71,9 @@
     .footer {
       height: 15vh;
       width: 100%;
-      background-color: $footer-bg;
+      background-color: #000;
       position: fixed;
       bottom: 0;
-    }
-  }
-
-  @media screen and (max-width: 940px) {
-    .box {
-      .wrapper {
-        aside {
-          display: none;
-        }
-
-        main {
-          width: 100%;
-        }
-      }
     }
   }
 </style>

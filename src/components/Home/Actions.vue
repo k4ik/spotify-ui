@@ -1,15 +1,17 @@
 <template>
-    <ul class="arrows">
-        <li class="arrow"><ChevronLeft size="18" /></li>
-        <li class="arrow"><ChevronRight size="18" /></li>
+    <ul class="actions">
+        <li class="action"><Bell size="14" /></li>
+        <li class="action"><Activity size="14" /></li>
+        <li class="action"><User size="14" /></li>
+
     </ul>
 </template>
 
 <script>
-import { ChevronLeft, ChevronRight  } from "lucide-vue-next";
+import { Bell, Activity, User } from "lucide-vue-next";
     export default {
         components: {
-            ChevronLeft, ChevronRight,
+            Bell, Activity, User
         },
     }
 </script>
@@ -17,14 +19,14 @@ import { ChevronLeft, ChevronRight  } from "lucide-vue-next";
 <style lang="scss" scoped>
     @import "../../assets/scss/variables";
 
-    .arrows {
+    .actions {
         display: flex;
         align-items: center;
         gap: 20px;
         list-style: none;
         margin-bottom: 20px;
 
-        .arrow {
+        .action {
             background: $color-gradient-5;
             width: 30px;
             height: 30px;

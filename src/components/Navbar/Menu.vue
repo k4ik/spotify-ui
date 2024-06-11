@@ -1,52 +1,54 @@
 <template>
-    <img src="../../assets/images/spotify-logo.png" alt="spotify logo">
-    <div class="icons-container">
-        <div class="icons-div">
-            <HomeIcon />
+    <ul class="container">
+        <li class="item">
+            <Home />
             <span>Home</span>
-        </div>
-        <div class="icons-div">
-            <SearchIcon />
+        </li>
+        <li class="item">
+            <Search />
             <span>Search</span>
-        </div>
-        <div class="icons-div">
-            <LibraryIcon />
+        </li>
+        <li class="item">
+            <Library />
             <span>Your Library</span>
-        </div>
-    </div>
+        </li>
+    </ul>
 </template>
 
 <script>
+import { Home, Search, Library } from "lucide-vue-next";
+
 export default {
-    name: "Menu"
+    components: {
+        Home, Search, Library
+    },
 }
 </script>
 
 <style lang="scss" scoped>
-    @import "../../assets/scss/variables";
+@import "../../assets/scss/variables";
 
-    img {
-        margin-bottom: 30px;
-        max-width: 150px;
-    }
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style: none;
+    background-color: $color-gradient-3;
+    color: $text-color;
+    border-radius: 12px;
 
-    .icons-container {
+    .item {
         display: flex;
-        flex-direction: column;
-        gap: 10px;
+        align-items: center;
+        gap: 20px;
+        padding: 5px;
 
-        .icons-div {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            padding: 5px;
-
-            &:hover {
-                cursor: pointer;
-                transition: .2s;
-                background-color: $hover-bg;
-                border-radius: 5px;
-            }
+        &:hover {
+            cursor: pointer;
+            transition: .2s;
+            border-radius: 5px;
+            color: $text-color2;
         }
     }
+}
 </style>
